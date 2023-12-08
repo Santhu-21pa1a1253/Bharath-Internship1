@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      background-image:url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+      background-repeat:no-repeat;
+      background-size:cover;
+    }
+    .par{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height:90vh;
+
+    }
+    .chi{
+       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding:30px;
+      border-radius:50px;
+      background-color:#ffffffa2;
+    }
+    .out{
+       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color:white;
+      font-size:5vh;
+    }
+  </style>
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="par">
+    <div class="chi">
+  <h1>Weather App</h1>
+  <form action="/" method="post">
+    <input type="text" name="city" placeholder="Enter city name" required>
+    <button type="submit">Show Weather</button>
+  </form>
+  
+    </div><br><br><br>
+    <div class="out">
+    <% if (weather) { %>
+    <p><%= weather %></p>
+  <% } %>
+  <% if (error) { %>
+    <p><%= error %></p>
+  <% } %>
+    
+  </div>
+    </div>
+  
+</body>
+</html>
